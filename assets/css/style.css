@@ -25,6 +25,10 @@ body {
     margin-right: auto;
 }
 
+li {
+    list-style-type: none;
+}
+
 a {
     text-decoration: none;
     list-style: none;
@@ -69,6 +73,7 @@ a {
 
 .btn:hover {
     opacity: 0.8;
+    cursor: pointer;
 }
 
 .line-clamp {
@@ -288,12 +293,20 @@ a {
     align-items: center;
 }
 
+.hero .watch-video .icon:hover {
+    opacity: 0.8;
+}
+
 .hero .watch-video span {
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 1.67;
     color: var(--black-color);
     margin-left: 14px;
+}
+
+.hero .watch-video span:hover {
+    color: var(--primary-color);
 }
 
 .hero .stats {
@@ -332,21 +345,24 @@ a {
 .popular-top .controls-btn {
     width: 40px;
     height: 40px;
-    border: 1px solid #ffb900;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
     border-radius: 50%;
     padding: 0;
+    color: var(--primary-color);
+}
+
+.popular-top .controls-btn:hover {
+    opacity: 0.8;
+    background-color: var(--primary-color);
+    color: #fff;
 }
 
 .popular-top .controls-btn:first-child {
-    background-color: transparent;
     margin-right: 14px;
 }
 
-.popular-top .controls-btn:last-child {
-    background-color: #ffb900;
-}
-
-.popular-top .controls-btn img {
+.popular-top .controls-btn svg {
     display: flex;
     margin: auto;
 }
@@ -359,18 +375,29 @@ a {
     margin-top: 55px;
 }
 
-.popular .course-list .thumb {
-    width: 370px;
+.popular .course-item {
+    flex: 1;
+    border: 1px solid #e2dfda;
+    border-radius: 12px;
+}
+
+.popular .course-item .thumb {
+    width: calc(100% + 2px);
     height: 278px;
     object-fit: cover;
     border-radius: 12px 12px 0px 0px;
+    margin: -1px;
+}
+
+.popular .course-item:hover {
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+    border-color: transparent;
 }
 
 .popular .course-item .info {
     background: #ffffff;
     border-radius: 0 0 12px 12px;
     padding: 16px 22px 22px;
-    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
 }
 
 .popular .course-item .head,
@@ -381,12 +408,16 @@ a {
     align-items: center;
 }
 
-.popular .course-item .title {
+.popular .course-item .title a {
     padding-right: 6px;
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 1.67;
     color: var(--black-color);
+}
+
+.popular .course-item .title a:hover {
+    color: var(--primary-color);
 }
 
 .popular .course-item .star {
@@ -432,8 +463,15 @@ a {
 
 .feedback .feedback-list {
     display: flex;
+    overflow: hidden;
+}
+
+.feedback .feedback-item {
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0;
+    width: 100%;
 }
 
 .feedback .feedback-item .avatar {
