@@ -42,20 +42,33 @@ a {
 }
 
 .heading.lv1 {
-    font-size: 5.8rem;
-    line-height: 1.17;
+    font-size: 3.7rem;
+    line-height: 1.26;
 }
 
 .heading.lv2 {
-    font-size: 3.8rem;
-    line-height: 1.26;
+    font-size: 5.7rem;
+    line-height: 1.17;
 }
 
 .desc {
     font-weight: 400;
+    color: #5f5b53;
+}
+
+.desc.lv1 {
+    font-size: 1.4rem;
+    line-height: 1.86;
+}
+
+.desc.lv2 {
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.desc.lv3 {
     font-size: 1.8rem;
     line-height: 1.67;
-    color: #5f5b53;
 }
 
 .btn {
@@ -74,6 +87,7 @@ a {
 .btn:hover {
     opacity: 0.8;
     cursor: pointer;
+    background-color: var(--primary-color);
 }
 
 .line-clamp {
@@ -174,6 +188,7 @@ a {
 
 .hero .body {
     display: flex;
+    height: 685px;
 }
 
 .hero .media-block {
@@ -316,10 +331,14 @@ a {
 .hero .stats strong {
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 4.4rem;
-    line-height: 1.23;
+    font-size: 6.4rem;
+    line-height: 61.23;
     color: var(--black-color);
     padding: 0 8px 0 28px;
+}
+
+.hero .stats {
+    height: 22px;
 }
 
 /* =============================== Popular Top ================================ */
@@ -356,6 +375,7 @@ a {
     opacity: 0.8;
     background-color: var(--primary-color);
     color: #fff;
+    cursor: pointer;
 }
 
 .popular-top .controls-btn:first-child {
@@ -531,4 +551,125 @@ a {
     line-height: 1.54;
     color: #ffffff;
     margin-left: 30px;
+}
+
+/* =============================== Features 1 ================================ */
+.features {
+    margin-top: 200px;
+}
+
+.features .body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features .features-img {
+    display: flex;
+    gap: 30px;
+    width: 49%;
+}
+
+.features-img .image {
+    width: 270px;
+    height: 405px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.features-img .image:first-child {
+    margin-top: 34px;
+}
+
+.features .features-content {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.features-content .desc {
+    margin-top: 16px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.features-content .btn {
+    margin-top: 32px;
+    min-width: 137px;
+    line-height: 48px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* =============================== Features 2================================ */
+.features-2 .body {
+    justify-content: space-between;
+}
+
+.features-2 .features-content {
+    width: 49%;
+}
+
+.features-2 .features-img .image {
+    width: 470px;
+    height: 440px;
+    margin-top: 0;
+    margin-left: auto;
+}
+
+/* =============================== Blog ================================ */
+.blog {
+    margin-top: 200px;
+    background-color: #fffcf4;
+}
+
+.blog .head {
+    padding-top: 96px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog .head .desc {
+    margin-top: 16px;
+    color: #696262;
+    width: 38%;
+}
+
+.blog-list {
+    margin-top: 55px;
+    display: flex;
+    gap: 30px;
+}
+
+.blog-list .thumb {
+    width: 370px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px 16px 0px 0px;
+}
+
+.blog-list .date {
+    position: relative;
+    display: block;
+    margin: 20px 0 12px 30px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5f5b53;
+    border-bottom: 1px solid #e2dfda;
+}
+
+.blog-list .date::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    top: 30px;
+    left: 20px;
 }
